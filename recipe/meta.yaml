@@ -12,10 +12,9 @@ source:
 build:
   number: 0
   script:
-    - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
-    - gem unpack {{ name }}-{{ version }}.gem
+    - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem && gem unpack {{ name }}-{{ version }}.gem  # [(osx and rb25)]
     - make -C {{ PREFIX }}/lib/ruby/gems/{{ ruby }}.0/gems/{{ name }}-{{ version }}/ext/{{ name }} clean
-  skip: {{ win }} or {{ osx & rb25 }}
+  skip: {{ win }}
 
 requirements:
   build:
