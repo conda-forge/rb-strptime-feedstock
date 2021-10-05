@@ -5,11 +5,13 @@ Home: https://rubygems.org/gems/strptime
 
 Package license: BSD-2-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rb-strptime-feedstock/blob/master/LICENSE.txt)
 
 Summary: a fast strptime/strftime engine which uses VM.
 
+Development: https://github.com/nurse/strptime
 
+Documentation: https://www.rubydoc.info/gems/strptime
 
 Current build status
 ====================
@@ -29,49 +31,37 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_ruby2.5</td>
+              <td>linux_64_ruby2.5</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7849&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rb-strptime-feedstock?branchName=master&jobName=linux&configuration=linux_ruby2.5" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rb-strptime-feedstock?branchName=master&jobName=linux&configuration=linux_64_ruby2.5" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ruby2.6</td>
+              <td>linux_64_ruby2.6</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7849&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rb-strptime-feedstock?branchName=master&jobName=linux&configuration=linux_ruby2.6" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rb-strptime-feedstock?branchName=master&jobName=linux&configuration=linux_64_ruby2.6" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_ruby2.5</td>
+              <td>osx_64_ruby2.5</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7849&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rb-strptime-feedstock?branchName=master&jobName=osx&configuration=osx_ruby2.5" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rb-strptime-feedstock?branchName=master&jobName=osx&configuration=osx_64_ruby2.5" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_ruby2.6</td>
+              <td>osx_64_ruby2.6</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7849&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rb-strptime-feedstock?branchName=master&jobName=osx&configuration=osx_ruby2.6" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rb-strptime-feedstock?branchName=master&jobName=osx&configuration=osx_64_ruby2.6" alt="variant">
                 </a>
               </td>
             </tr>
           </tbody>
         </table>
       </details>
-    </td>
-  </tr>
-  <tr>
-    <td>Windows</td>
-    <td>
-      <img src="https://img.shields.io/badge/Windows-disabled-lightgrey.svg" alt="Windows disabled">
-    </td>
-  </tr>
-  <tr>
-    <td>Linux_ppc64le</td>
-    <td>
-      <img src="https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg" alt="ppc64le disabled">
     </td>
   </tr>
 </table>
@@ -90,6 +80,7 @@ Installing `rb-strptime` from the `conda-forge` channel can be achieved by addin
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `rb-strptime` can be installed with:
@@ -119,7 +110,7 @@ A feedstock is made up of a conda recipe (the instructions on what and how to bu
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.org/) it is possible to build and upload installable
+and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
 packages to the [conda-forge](https://anaconda.org/conda-forge)
 [Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
 
@@ -160,15 +151,14 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
 =====================
 
-* [@oblute](https://github.com/oblute/)
-* [@rluria14](https://github.com/rluria14/)
+* [@mxr-conda](https://github.com/mxr-conda/)
 * [@sodre](https://github.com/sodre/)
 
